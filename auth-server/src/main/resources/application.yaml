@@ -4,19 +4,17 @@ server:
 logging:
   level:
     org.springframework.security: trace
+    
 
 spring:
   security:
-    user:
-      name: pepe
-      password: 12345
     oauth2:
       authorizationserver:
         client:
           oidc-client:
             registration:
               client-id: "client-app"
-              client-secret: "{noop}12345"
+              client-secret: "12345"
               client-authentication-methods:
                 - "client_secret_basic"
               authorization-grant-types:
